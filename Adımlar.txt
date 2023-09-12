@@ -3,3 +3,8 @@ Api testi ve swagger
 tema ekle
  
 Register - Login
+
+onay bekliyor +
+onaylandý+
+iptal edildi+
+bekletiliyor + rezervasyonlar

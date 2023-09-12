@@ -11,7 +11,7 @@
         <th>Personel Ünvan</th>
         <th>Sil</th>
         <th>Güncelle</th>
-        <th>Detaylar</th>
+      
     </tr>
     @foreach (var item in Model)
     {
@@ -21,7 +21,7 @@
         <td>@item.Title</td>
             <td><a asp-controller="Staff" asp-action="DeleteStaff" asp-route-id="@item.StaffID" style="color:black" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
             <td><a asp-controller="Staff" asp-action="UpdateStaff" asp-route-id="@item.StaffID" style="color:black" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
-            <td><a style="color:black" class="btn mb-1 btn-rounded btn-outline-danger">Detaylar</a></td>
+           
         </tr>
     }
 

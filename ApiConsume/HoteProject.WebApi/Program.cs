@@ -34,6 +34,9 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<IAboutUsDal, EfAboutUsDal>();
 builder.Services.AddScoped<IAboutService, AboutUsManager>();
 
+builder.Services.AddScoped<IBookingDal, EfBookingDal>();
+builder.Services.AddScoped<IBookingService, BookingManager>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddCors(Opt => //api Comsume edilecek alanlarý tutacak
