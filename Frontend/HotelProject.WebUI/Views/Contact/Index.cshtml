@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -19,15 +18,12 @@
 
         @await Component.InvokeAsync("_BookingCoverPartial")
 
- 
-     
-    
-
         @await Html.PartialAsync("/Views/Booking/AddBooking.cshtml")
 
         @await Html.PartialAsync("/Views/Default/_SubscribePartial.cshtml")
 
         @await Component.InvokeAsync("_FooterPartial")
+
         @await Component.InvokeAsync("_ScriptPartial")
 
     </div>

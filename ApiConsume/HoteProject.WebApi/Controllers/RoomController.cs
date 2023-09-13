@@ -28,7 +28,7 @@ namespace HoteProject.WebApi.Controllers
             _roomService.TAdd(room);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteRoom(int id)
         {
             var values = _roomService.TGetBy(id);
@@ -43,7 +43,7 @@ namespace HoteProject.WebApi.Controllers
             return Ok();
         }
 
-        [HttpGet("(id)")]
+        [HttpGet("{id}")]
         public IActionResult GetRoom(int id)
         {
             var values = _roomService.TGetBy(id);
