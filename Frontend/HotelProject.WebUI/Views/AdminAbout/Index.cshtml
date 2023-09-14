@@ -1,0 +1,29 @@
+﻿@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık 1</th>
+        <th>Başlık 2</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.AboutUsID</th>
+            <td>@item.Title</td>
+            <td>@item.Title2</td>
+
+            <td><a asp-controller="AdminAbout" asp-action="UpdateAbout" asp-route-id="@item.AboutUsID" style="color:black" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+
+        </tr>
+    }
+
+
+</table>

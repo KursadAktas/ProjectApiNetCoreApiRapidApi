@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
+@* contact iletişim sayfası *@
 <!DOCTYPE html>
 
 <!DOCTYPE html>
@@ -16,9 +16,10 @@
 
         @await Component.InvokeAsync("_NavbarPartial")
 
-        @await Component.InvokeAsync("_BookingCoverPartial")
+        
+        @await Component.InvokeAsync("_ContactCoverPartial")
 
-        @await Html.PartialAsync("/Views/Booking/AddBooking.cshtml")
+        @await Html.PartialAsync("/Views/Contact/SentMessage.cshtml")
 
         @await Html.PartialAsync("/Views/Default/_SubscribePartial.cshtml")
 
@@ -29,3 +30,4 @@
     </div>
 </body>
 
+</html>

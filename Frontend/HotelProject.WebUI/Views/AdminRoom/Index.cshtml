@@ -1,0 +1,35 @@
+﻿@model List<ResultRoomDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Oda Numarası</th>
+        <th>Başlık</th>
+        <th>Görsel</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.RoomNumber</td>
+            <td>@item.Title</td>
+            <td>@item.RoomCoverImage</td>
+            <td><a asp-controller="AdminRoom" asp-action="DeleteRoom" asp-route-id="@item.RoomID" style="color:black" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+            <td><a asp-controller="AdminRoom" asp-action="UpdateRoom" asp-route-id="@item.RoomID" style="color:black" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+
+        </tr>
+    }
+
+
+</table>
+<a asp-controller="AdminRoom" asp-action="CreateRoom" style="color:white" class="btn btn-success">Yeni Oda Girişi</a>
